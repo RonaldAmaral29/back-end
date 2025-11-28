@@ -55,6 +55,7 @@ def create_app():
     from app.controllers.arquivos_controller import arquivos_bp
     from app.controllers.comunicados_controller import comunicados_bp
     from app.controllers.dashboard_controller import dashboard_bp
+    from app.controllers.auth_controller import auth_bp
 
     app.register_blueprint(usuarios_bp, url_prefix="/usuarios")
     app.register_blueprint(alunos_bp, url_prefix="/alunos")
@@ -67,6 +68,7 @@ def create_app():
     app.register_blueprint(arquivos_bp, url_prefix="/arquivos")
     app.register_blueprint(comunicados_bp, url_prefix="/comunicados")
     app.register_blueprint(dashboard_bp, url_prefix="/dashboard")
+    app.register_blueprint(auth_bp, url_prefix="/auth")
 
     return app
 
